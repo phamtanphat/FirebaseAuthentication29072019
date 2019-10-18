@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "912670173469",
+    "firebase_url": "https://fir-authentication29072019.firebaseio.com",
+    "project_id": "fir-authentication29072019",
+    "storage_bucket": "fir-authentication29072019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912670173469:android:e7b97113b44be440ae19f4",
+        "android_client_info": {
+          "package_name": "phamtanphat.ptp.khoaphamtraining.firebaseauthentication29072019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912670173469-5abte20vlp25qtaljni4phloa3ecttuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "phamtanphat.ptp.khoaphamtraining.firebaseauthentication29072019",
+            "certificate_hash": "d95547cd6edaa45354c31ed18c7bef24959b3cd9"
+          }
+        },
+        {
+          "client_id": "912670173469-7o722j5mfoi5jrubs2g5r71jeudh0sun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3IF-MXNrk0ofERRuHY3hjEfTW0YJgfEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912670173469-7o722j5mfoi5jrubs2g5r71jeudh0sun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
