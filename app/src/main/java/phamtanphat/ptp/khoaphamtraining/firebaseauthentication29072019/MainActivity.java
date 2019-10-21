@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     EditText mEdtEmail , mEdtPassword;
-    Button btnDangky, btnDangnhap,btnThongTinUser;
+    Button btnDangky, btnDangnhap,btnThongTinUser,btnXacThucEmail;
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnDangky = findViewById(R.id.buttonDangky);
         btnDangnhap = findViewById(R.id.buttonDangnhap);
         btnThongTinUser = findViewById(R.id.buttonThongtin);
+        btnXacThucEmail = findViewById(R.id.buttonVerification);
 
         btnDangky.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +96,28 @@ public class MainActivity extends AppCompatActivity {
                             "photoUrl : %s "  + "\n" +
                             "uid : %s " ,name , email , photoUrl , uid ), Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        btnXacThucEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseUser user = mAuth.getCurrentUser();
+
+                if (user != null){
+                    user.sendEmailVerification()
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(MainActivity.this, "Đã gửi email xác thực", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(MainActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+
+
             }
         });
     }
